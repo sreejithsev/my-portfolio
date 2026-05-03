@@ -1,0 +1,29 @@
+---
+---
+
+<pre class="mermaid">
+  <slot />
+</pre>
+
+<script is:inline>
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  
+  const initializeMermaid = () => {
+    mermaid.initialize({ startOnLoad: true });
+    mermaid.run();
+  };
+
+  // Initial load
+  initializeMermaid();
+
+  // Support View Transitions
+  document.addEventListener('astro:after-swap', initializeMermaid);
+</script>
+
+<style is:global>
+  .mermaid {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+  }
+</style>
