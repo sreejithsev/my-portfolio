@@ -3,6 +3,7 @@ title: "Java Virtual Threads: Scaling to Millions of Concurrent Tasks"
 description: "A deep dive into the architecture of Project Loom, exploring how virtual threads map to carrier threads and the OS."
 pubDate: 2026-05-03
 tags: ["java", "architecture", "scalability"]
+category: "Architecture"
 complexity: "Medium"
 ---
 
