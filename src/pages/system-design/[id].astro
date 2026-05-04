@@ -16,14 +16,14 @@ const { Content } = await render(post);
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+		<link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
 		<meta name="viewport" content="width=device-width" />
 		<title>{post.data.title}</title>
 	</head>
 	<body class="bg-slate-900 text-slate-100 min-h-screen p-8 font-sans">
 		<main class="max-w-3xl mx-auto">
-			<a href="/my-portfolio/" class="text-blue-400 hover:underline mb-8 inline-block">← Back to Portfolio</a>
+			<a href={`${import.meta.env.BASE_URL}`} class="text-blue-400 hover:underline mb-8 inline-block">← Back to Portfolio</a>
 			<article class="prose prose-invert lg:prose-xl max-w-none">
 				<header class="mb-8">
 					<h1 class="text-4xl font-extrabold mb-4">{post.data.title}</h1>

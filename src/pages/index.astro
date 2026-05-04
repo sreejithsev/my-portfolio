@@ -7,8 +7,8 @@ const posts = await getCollection('system-design');
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+		<link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>My Portfolio | System Design & Java</title>
@@ -27,7 +27,7 @@ const posts = await getCollection('system-design');
 						<article class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors shadow-lg">
 							<div class="flex justify-between items-start mb-2">
 								<h3 class="text-xl font-bold">
-									<a href={`/my-portfolio/system-design/${post.id}`} class="hover:text-blue-400">
+									<a href={`${import.meta.env.BASE_URL}system-design/${post.id}`} class="hover:text-blue-400">
 										{post.data.title}
 									</a>
 								</h3>
