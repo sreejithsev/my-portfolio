@@ -1,15 +1,29 @@
 ---
 ---
 
-<pre class="mermaid">
-  <slot />
-</pre>
+<div class="mermaid-container glass-card p-6 my-8 overflow-x-auto">
+  <pre class="mermaid">
+    <slot />
+  </pre>
+</div>
 
 <script is:inline>
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   
   const initializeMermaid = () => {
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        primaryColor: '#3b82f6',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#1d4ed8',
+        lineColor: '#64748b',
+        secondaryColor: '#10b981',
+        tertiaryColor: '#1e293b'
+      }
+    });
     mermaid.run();
   };
 
@@ -25,5 +39,9 @@
     display: flex;
     justify-content: center;
     background: transparent;
+  }
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
   }
 </style>
